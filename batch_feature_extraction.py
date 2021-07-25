@@ -9,7 +9,7 @@ process_str = 'dev'  # 'dev' or 'eval' will extract features for the respective 
 
 dataset_name = 'foa'  # 'foa' -ambisonic or 'mic' - microphone signals
 dataset_dir = '/mnt/data/orig/train/'
-feat_label_dir = '/mnt/data/orig/train/feat_label_tmp/'  # Directory to dump extracted features and labels
+feat_label_dir = '/mnt/data/orig/features/feat_label_tmp/'  # Directory to dump extracted features and labels
 
 
 if 'dev' in process_str:
