@@ -111,7 +111,7 @@ class FeatureClass:
         nb_bins = self._nfft // 2
         spectra = np.zeros((self._max_frames, nb_bins, _nb_ch), dtype=complex)
         for ch_cnt in range(_nb_ch):
-            stft_ch = librosa.core.stft(audio_input[:, ch_cnt], n_fft=self._nfft, hop_length=self._hop_len,
+            stft_ch = librosa.core.stft(np.asfortranarray(audio_input[:, ch_cnt]), n_fft=self._nfft, hop_length=self._hop_len,
                                         win_length=self._win_len, window='hann')
             spectra[:, :, ch_cnt] = stft_ch[1:, :self._max_frames].T
         return spectra
@@ -342,7 +342,7 @@ class FeatureClass:
 
     def get_nb_frames(self):
         return self._max_frames
-    
+
 
 def create_folder(folder_name):
     if not os.path.exists(folder_name):
