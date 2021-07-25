@@ -8,8 +8,8 @@ import cls_feature_class
 process_str = 'eval'  # 'dev' or 'eval' will extract features for the respective set accordingly
 
 dataset_name = 'mic'  # 'foa' -ambisonic or 'mic' - microphone signals
-dataset_dir = '/mnt/data/orig/eval/proj/asignal/DCASE2019/dataset/'   # Base folder containing the foa/mic and metadata folders
-feat_label_dir = '/mnt/data/orig/eval/proj/asignal/DCASE2019/dataset/feat_label_tmp/'  # Directory to dump extracted features and labels
+dataset_dir = '/mnt/data/orig/eval/'   # Base folder containing the foa/mic and metadata folders
+feat_label_dir = '/mnt/data/orig/eval/feat_label_tmp/'  # Directory to dump extracted features and labels
 
 
 if 'dev' in process_str:
